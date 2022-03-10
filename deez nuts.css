@@ -1,0 +1,67 @@
+#ada {
+    display: flex;
+    vertical-align: baseline;
+    margin-right: 0px;
+    justify-content: space-between;
+}
+
+p {
+    display: block;
+}
+
+#fuenf {
+    color: gold
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+#roll {
+    box-sizing: content-box;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 20%;
+    text-align: center;
+    float: top;
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
+#kek {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    box-sizing: content-box;
+    display: block;
+
+}
+
+html {
+    background-color: black;
+    font-family: 'League Spartan', sans-serif;
+
+}
+
+#calulos {
+    float: right;
+    margin-right: 0px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #calulos {
+        margin-top: 15%;
+        font-size: 22.5px;
+    }
+
+    #kek {
+        display: block;
+
+    }
+
+    #roll {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 35px;
+    }
+}

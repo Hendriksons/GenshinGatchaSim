@@ -1,130 +1,112 @@
 <html>
 
-<script>
-    //By Hendrikson aka. Esdeath,Cocoma`am,Salveteservi
-    let i = 0
-    let eventfivestar = null;
-    let ca = [
-        ["Raiden Shogun", "Kujou Sara", "Bennett", "Xingyan"],
-        ["Kokomi", "Kujou Sara", "Bennett", "Xingyan"],
-        ["Yae Miko", "Fischl", "Thoma", "Diona"],
-        ["Ganyu", "Xingqui", "Beidou", "Yanfei"],
-        ["Zongli", "Xingqui", "Beidou", "Yanfei"],
-        ["Shenhe", "Yun Jin", "Ningguang", "Chongyun"],
-        ["Xiao", "Yun Jin", "Ningguang", "Chongyun"],
-        ["Arataki Itto", "Gorou", "Barbara", "Xiangling"],
-        ["Eula", "Bennett", "Noelle", "Rosaria"],
-        ["Albedo", "Bennett", "Noelle", "Rosaria"],
-        ["Hu Tao", "Thoma", "Diona", "Sayu"],
-        ["Tartaglia", "Ningguang", "Chongyun", "Yanfei"],
-        ["Kokomi", "Rosaria", "Beidou", "Xingqiu"],
-        ["Raiden Shogun", "Xiangling", "Kujou Sara", "Sucrose"],
-        ["Yoimiya", "Sayu", "Diona", "Xingyan"],
-        ["Ayaka", "Ningguang", "Chongyun", "Yanfei"],
-        ["Kazuha", "Rosaria", "Razor", "Bennett"],
-        ["Klee", "Barbara", "Sucrose", "Fischl"],
-        ["Eula", "Xingyan", "Xingqiu", "Beidou"],
-        ["Zhongli", "Yanfei", "Noelle", "Diona"],
-        ["Tartaglia", "Rosaria", "Barbara", "Fischl"],
-        ["Venti", "Sucrose", "Razor", "Noelle"],
-        ["Hu Tao", "Xingqiu", "Xiangling", "Chongyun"],
-        ["Keqing", "Ningguang", "Bennett", "Barbara"],
-        ["Xiao", "Diona", "Beidou", "Xingyan"],
-        ["Ganyu", "Xiangling", "Xingqiu", "Noelle"],
-        ["Albedo", "Fischl", "Sucrose", "Bennett"],
-        ["Zhongli", "Xingyan", "Razor", "Chongyun"],
-        ["Tartaglia", "Diona", "Beidou", "Ningguang"],
-        ["Klee", "Xingqiu", "Noelle", "Sucrose"],
-        ["Venti", "Fischl", "Barbara", "Xiangling"]
-    ]
-    let aa = ["Amber", "Barbara", "Beidou", "Bennett", "Chongyun", "Diona", "Fischel", "Gorou", "Kaeya", "Kujou Sara", "Lisa", "Ningguang", "Noelle", "Razor", "Rosaria", "Sayu", "Succrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yun Jin", "Rust", "The Stringless", "Eye of Perception", "The Widsith", "Favonius Lance", "Painslasher", "The Bell", "Lion's Roar", "The Flute", "Sacrificial Bow", "Favonius Warbow", "Sacrificial Fragments", "Favonius Codex", "Dragon's Bane", "Sacrificial Greatsword", "Favonius Greatsword", "Sacrificial Sword", "Favonius Sword"];
-    let a4 = ["Amber", "Barbara", "Beidou", "Bennett", "Chongyun", "Diona", "Fischel", "Gorou", "Kaeya", "Kujou Sara", "Lisa", "Ningguang", "Noelle", "Razor", "Rosaria", "Sayu", "Succrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yun Jin", "Rust", "The Stringless", "Eye of Perception", "The Widsith", "Favonius Lance", "Painslasher", "The Bell", "Lion's Roar", "The Flute", "Sacrificial Bow", "Favonius Warbow", "Sacrificial Fragments", "Favonius Codex", "Dragon's Bane", "Sacrificial Greatsword", "Favonius Greatsword", "Sacrificial Sword", "Favonius Sword"];
-    let a3 = ["Slingshot", "Raven Bow", "Thrilling Tales of Dragon Slayers", "Black Tassel", "Bloodtainted Greatsword", "Skyrider Sword", "Cool Steel", "Sharpshooter's Oath", "Emerald Orb", "Magic Guide", "Debate Club", "Ferrous Shadow", "Harbinger of Dawn"]
-    let a5 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
-    let a7 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
-    let a8 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
-    let rols90 = 0;
-    let rols = 0;
-    function loadlist() {
-        console.log("lol");
-        for (let i = 0; i < ca.length; i++) {
-            let b = ca[i]
-            console.log(b);
-            document.getElementById("calulos").innerHTML = document.getElementById("calulos").innerHTML + "<p onclick=gelt(" + i + ")>" + b[0] + "</p>"
+<head>
+    <title>GenshinGatchaSim</title>
+    <link rel="stylesheet" href="deez nuts.css">
+    <script>
+        //By Hendrikson aka. Esdeath,Cocoma`am,Salveteservi
+        let i = 0
+        let eventfivestar = null;
+        let ca = [
+            ["Raiden Shogun", "Kujou Sara", "Bennett", "Xingyan", ".5"],
+            ["Kokomi", "Kujou Sara", "Bennett", "Xingyan", "2.5"],
+            ["Yae Miko", "Fischl", "Thoma", "Diona", "2.5"],
+            ["Ganyu", "Xingqui", "Beidou", "Yanfei", "2.4"],
+            ["Zongli", "Xingqui", "Beidou", "Yanfei", "2.4"],
+            ["Shenhe", "Yun Jin", "Ningguang", "Chongyun", "2.4"],
+            ["Xiao", "Yun Jin", "Ningguang", "Chongyun", "2.4"],
+            ["Arataki Itto", "Gorou", "Barbara", "Xiangling", "2.3"],
+            ["Eula", "Bennett", "Noelle", "Rosaria", "2.3"],
+            ["Albedo", "Bennett", "Noelle", "Rosaria", "2.3"],
+            ["Hu Tao", "Thoma", "Diona", "Sayu", "2.2"],
+            ["Tartaglia", "Ningguang", "Chongyun", "Yanfei", "2.2"],
+            ["Kokomi", "Rosaria", "Beidou", "Xingqiu", "2.1"],
+            ["Raiden Shogun", "Xiangling", "Kujou Sara", "Sucrose", "2.1"],
+            ["Yoimiya", "Sayu", "Diona", "Xingyan", "2.0"],
+            ["Ayaka", "Ningguang", "Chongyun", "Yanfei", "2.0"],
+            ["Kazuha", "Rosaria", "Razor", "Bennett", "1.6"],
+            ["Klee", "Barbara", "Sucrose", "Fischl", "1.6"],
+            ["Eula", "Xingyan", "Xingqiu", "Beidou", "1.5"],
+            ["Zhongli", "Yanfei", "Noelle", "Diona", "1.5"],
+            ["Tartaglia", "Rosaria", "Barbara", "Fischl", "1.4"],
+            ["Venti", "Sucrose", "Razor", "Noelle", "1.4"],
+            ["Hu Tao", "Xingqiu", "Xiangling", "Chongyun", "1.3"],
+            ["Keqing", "Ningguang", "Bennett", "Barbara", "1.3"],
+            ["Xiao", "Diona", "Beidou", "Xingyan", "1.3"],
+            ["Ganyu", "Xiangling", "Xingqiu", "Noelle", "1.2"],
+            ["Albedo", "Fischl", "Sucrose", "Bennett", "1.2"],
+            ["Zhongli", "Xingyan", "Razor", "Chongyun", "1.1"],
+            ["Tartaglia", "Diona", "Beidou", "Ningguang", "1.1"],
+            ["Klee", "Xingqiu", "Noelle", "Sucrose", "1.0"],
+            ["Venti", "Fischl", "Barbara", "Xiangling", "1.0"]
+        ]
+        let aa = ["Amber", "Barbara", "Beidou", "Bennett", "Chongyun", "Diona", "Fischel", "Gorou", "Kaeya", "Kujou Sara", "Lisa", "Ningguang", "Noelle", "Razor", "Rosaria", "Sayu", "Succrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yun Jin", "Rust", "The Stringless", "Eye of Perception", "The Widsith", "Favonius Lance", "Painslasher", "The Bell", "Lion's Roar", "The Flute", "Sacrificial Bow", "Favonius Warbow", "Sacrificial Fragments", "Favonius Codex", "Dragon's Bane", "Sacrificial Greatsword", "Favonius Greatsword", "Sacrificial Sword", "Favonius Sword"];
+        let a4 = ["Amber", "Barbara", "Beidou", "Bennett", "Chongyun", "Diona", "Fischel", "Gorou", "Kaeya", "Kujou Sara", "Lisa", "Ningguang", "Noelle", "Razor", "Rosaria", "Sayu", "Succrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yun Jin", "Rust", "The Stringless", "Eye of Perception", "The Widsith", "Favonius Lance", "Painslasher", "The Bell", "Lion's Roar", "The Flute", "Sacrificial Bow", "Favonius Warbow", "Sacrificial Fragments", "Favonius Codex", "Dragon's Bane", "Sacrificial Greatsword", "Favonius Greatsword", "Sacrificial Sword", "Favonius Sword"];
+        let a3 = ["Slingshot", "Raven Bow", "Thrilling Tales of Dragon Slayers", "Black Tassel", "Bloodtainted Greatsword", "Skyrider Sword", "Cool Steel", "Sharpshooter's Oath", "Emerald Orb", "Magic Guide", "Debate Club", "Ferrous Shadow", "Harbinger of Dawn"]
+        let a5 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
+        let a7 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
+        let a8 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
+        let rols90 = 0;
+        let rols = 0;
+        function loadlist() {
+            console.log("lol");
+            for (let i = 0; i < ca.length; i++) {
+                let b = ca[i]
+                console.log(b);
+                document.getElementById("calulos").innerHTML = document.getElementById("calulos").innerHTML + "<p onclick=gelt(" + i + ")>" + b[0] + "   " + b[4] + "</p>"
+
+            }
+        }
+        seteventfourestar(ca[0][1]);
+        seteventfourestar(ca[0][2]);
+        seteventfourestar(ca[0][3]);
+        seteventfivestar(ca[0][0])
+        function gelt(lol) {
+            let b = ca[lol]
+            console.log("old a5", a5);
+            a5.length = 0
+            a5 = a5.concat(a8)
+            console.log("a7", a7);
+            console.log("a5", a5);
+            console.log("a8", a8);
+            a4.length = 0
+            a4 = a4.concat(aa)
+            seteventfourestar(b[1]);
+            seteventfourestar(b[2]);
+            seteventfourestar(b[3]);
+            seteventfivestar(b[0])
+        }
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        function get_random(list) {
+            return list[Math.floor((Math.random() * list.length))];
+        }
+        function get3star() {
+            //console.log("3 Sterne");
+            document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p>3 Sterne :" + get_random(a3) + "</p>"
+        }
+        function get4star() {
+            //console.log("4 Sterne");
+            document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p>4 Sterne :" + get_random(a4) + "</p>"
+        }
+        function get5star() {
+            //console.log("5 Sterne");
+            let s = get_random(a5)
+            if (i == 1) {
+                i = 0;
+                document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  :" + eventfivestar + "</p>"
+            } else if (a7.includes(s)) {
+                i = i + 1
+                document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  : " + s + "</p>"
+            } else if (s == eventfivestar) {
+                document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  : " + s + "</p>"
+                i = 0
+            }
 
         }
-    }
-    seteventfourestar(ca[0][1]);
-    seteventfourestar(ca[0][2]);
-    seteventfourestar(ca[0][3]);
-    seteventfivestar(ca[0][0])
-    function gelt(lol) {
-        let b = ca[lol]
-        console.log("old a5", a5);
-        a5.length = 0
-        a5 = a5.concat(a8)
-        console.log("a7", a7);
-        console.log("a5", a5);
-        console.log("a8", a8);
-        a4 = aa;
-        seteventfourestar(b[1]);
-        seteventfourestar(b[2]);
-        seteventfourestar(b[3]);
-        seteventfivestar(b[0])
-    }
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
-    function get_random(list) {
-        return list[Math.floor((Math.random() * list.length))];
-    }
-    function get3star() {
-        //console.log("3 Sterne");
-        document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p>3 Sterne :" + get_random(a3) + "</p>"
-    }
-    function get4star() {
-        //console.log("4 Sterne");
-        document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p>4 Sterne :" + get_random(a4) + "</p>"
-    }
-    function get5star() {
-        //console.log("5 Sterne");
-        let s = get_random(a5)
-        if (i == 1) {
-            i = 0;
-            document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  :" + eventfivestar + "</p>"
-        } else if (a7.includes(s)) {
-            i = i + 1
-            document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  : " + s + "</p>"
-        } else if (s == eventfivestar) {
-            document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  : " + s + "</p>"
-            i = 0
-        }
-
-    }
-    function pull() {
-        document.getElementById("kek").innerText = ""
-        let a = getRandomInt(999)
-        rols = rols + 1;
-        rols90 = rols90 + 1;
-        if (rols90 == 90) {
-            get5star();
-            rols90 = 0;
-        } else if (rols == 10 || rols >= 10) {
-            get4star();
-            rols = 0;
-        } else if (a >= 57) {
-            get3star();
-        } else if (a <= 57 && a >= 6) {
-            get4star();
-            rols = 0;
-        } else if (a <= 6) {
-            get5star();
-            rols90 = 0;
-        }
-    }
-    function pull10() {
-        document.getElementById("kek").innerText = ""
-        for (let i = 0; i < 10; i++) {
+        function pull() {
+            document.getElementById("kek").innerText = ""
             let a = getRandomInt(999)
             rols = rols + 1;
             rols90 = rols90 + 1;
@@ -143,102 +125,60 @@
                 get5star();
                 rols90 = 0;
             }
-
-            //console.log(i);
-            //console.log(a);
-            //console.log(rols);
         }
-    }
-    function lol() {
-        loadlist()
-        document.body.style = "color:red"
+        function pull10() {
+            document.getElementById("kek").innerText = ""
+            for (let i = 0; i < 10; i++) {
+                let a = getRandomInt(999)
+                rols = rols + 1;
+                rols90 = rols90 + 1;
+                if (rols90 == 90) {
+                    get5star();
+                    rols90 = 0;
+                } else if (rols == 10 || rols >= 10) {
+                    get4star();
+                    rols = 0;
+                } else if (a >= 57) {
+                    get3star();
+                } else if (a <= 57 && a >= 6) {
+                    get4star();
+                    rols = 0;
+                } else if (a <= 6) {
+                    get5star();
+                    rols90 = 0;
+                }
 
-
-
-    }
-    function seteventfivestar(name) {
-        eventfivestar = name;
-        for (let i = 0; i < 5; i++) {
-            a5.push(name);
-            //console.log(a5);
+                //console.log(i);
+                //console.log(a);
+                //console.log(rols);
+            }
         }
-    } function seteventfourestar(name) {
-        for (let i = 0; i < 12; i++) {
-            a4.push(name);
-            //console.log(a4);
-        }
-    }
+        function lol() {
+            loadlist()
+            document.body.style = "color:red"
 
-</script>
-<style>
-    #ada {
-        display: flex;
-        vertical-align: baseline;
-        margin-right: 0px;
-        justify-content: space-between;
-    }
 
-    p {
-        display: block;
-    }
-
-    #fuenf {
-        color: gold
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
-
-    #roll {
-        box-sizing: content-box;
-        padding: 10px;
-        border-style: solid;
-        border-radius: 20%;
-        text-align: center;
-        float: top;
-        margin-top: 0px;
-        padding-top: 0px;
-
-    }
-
-    #kek {
-        text-align: center;
-        margin-top: 10px;
-        font-size: 30px;
-        box-sizing: content-box;
-        display: block;
-
-    }
-
-    html {
-        background-color: black;
-        font-family: 'League Spartan', sans-serif;
-
-    }
-
-    #calulos {
-        float: right;
-        margin-right: 0px;
-
-    }
-
-    @media only screen and (max-width: 600px) {
-        #calulos {
-            margin-top: 15%;
-            font-size: 22.5px;
-        }
-
-        #kek {
-            display: block;
 
         }
-
-        #roll {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 35px;
+        function seteventfivestar(name) {
+            eventfivestar = name;
+            for (let i = 0; i < a8.length; i++) {
+                a5.push(name);
+                //console.log(a5);
+            }
+        } function seteventfourestar(name) {
+            let numb = Math.round(aa.length / 3)
+            console.log("lol", numb);
+            for (let i = 0; i < numb; i++) {
+                a4.push(name);
+                //console.log(a4);
+            }
         }
-    }
-</style>
+
+    </script>
+</head>
+
+
 
 
 <body onload="lol()">
