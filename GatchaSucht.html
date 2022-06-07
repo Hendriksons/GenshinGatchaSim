@@ -46,15 +46,7 @@
 
         }
 
-        #calulos {
-            margin-top: 0px;
-            float: right;
-            margin-right: 0px;
-            border-left-style: solid;
-            padding-left: 5px;
-            border-left-color: gray;
-            border-left-width: 2px;
-        }
+
 
         #lsa {
             box-sizing: content-box;
@@ -79,7 +71,7 @@
             }
 
             #roll {
-                
+
                 font-size: 25px;
                 padding-right: 9px;
             }
@@ -92,58 +84,73 @@
                 margin-right: 50%;
             }
 
+            #calulos {
+                margin-top: 0px;
+                float: right;
+                margin-right: 0px;
+                border-left-style: solid;
+                padding-left: 5px;
+                border-left-color: gray;
+                border-left-width: 2px;
+            }
+
         }
     </style>
     <script>
         //By Hendrikson aka. Esdeath,Cocoma`am,Salveteservi
         let i = 0
         let eventfivestar = null;
+        let ef = ["Venti","Klee","Tartaglia","Zhongli","Albedo","Ganyu","Xiao","Hu Tao","Eula","Kazuha","Ayaka","Yoimiya","Raiden Shogun","Kokomi","Arataki Itto","Shenhe","Yae Miko","Ayato","Yelan"]
+
         let ca = [
-            ["Raiden Shogun", "Kujou Sara", "Bennett", "Xingyan", "2.5"],
-            ["Kokomi", "Kujou Sara", "Bennett", "Xingyan", "2.5"],
-            ["Yae Miko", "Fischl", "Thoma", "Diona", "2.5"],
-            ["Ganyu", "Xingqui", "Beidou", "Yanfei", "2.4"],
-            ["Zongli", "Xingqui", "Beidou", "Yanfei", "2.4"],
-            ["Shenhe", "Yun Jin", "Ningguang", "Chongyun", "2.4"],
-            ["Xiao", "Yun Jin", "Ningguang", "Chongyun", "2.4"],
-            ["Arataki Itto", "Gorou", "Barbara", "Xiangling", "2.3"],
-            ["Eula", "Bennett", "Noelle", "Rosaria", "2.3"],
-            ["Albedo", "Bennett", "Noelle", "Rosaria", "2.3"],
-            ["Hu Tao", "Thoma", "Diona", "Sayu", "2.2"],
-            ["Tartaglia", "Ningguang", "Chongyun", "Yanfei", "2.2"],
-            ["Kokomi", "Rosaria", "Beidou", "Xingqiu", "2.1"],
-            ["Raiden Shogun", "Xiangling", "Kujou Sara", "Sucrose", "2.1"],
-            ["Yoimiya", "Sayu", "Diona", "Xingyan", "2.0"],
-            ["Ayaka", "Ningguang", "Chongyun", "Yanfei", "2.0"],
-            ["Kazuha", "Rosaria", "Razor", "Bennett", "1.6"],
-            ["Klee", "Barbara", "Sucrose", "Fischl", "1.6"],
-            ["Eula", "Xingyan", "Xingqiu", "Beidou", "1.5"],
-            ["Zhongli", "Yanfei", "Noelle", "Diona", "1.5"],
-            ["Tartaglia", "Rosaria", "Barbara", "Fischl", "1.4"],
-            ["Venti", "Sucrose", "Razor", "Noelle", "1.4"],
-            ["Hu Tao", "Xingqiu", "Xiangling", "Chongyun", "1.3"],
+            [ef[6],"Barbara","Noelle","Yanfei","2.7"],
+            [ef[18],"Barbara","Noelle","Yanfei","2.7"],
+            [ef[10],"Razor","Rosaria","Sayu","2.6"],
+            [ef[0],"Sucrose","Xiangling","Yun Jin","2.6"],
+            [ef[17],"Sucrose","Xiangling","Yun Jin","2.6"],
+            [ef[12], "Kujou Sara", "Bennett", "Xingyan", "2.5"],
+            [ef[13], "Kujou Sara", "Bennett", "Xingyan", "2.5"],
+            [ef[16], "Fischl", "Thoma", "Diona", "2.5"],
+            [ef[5], "Xingqui", "Beidou", "Yanfei", "2.4"],
+            [ef[3], "Xingqui", "Beidou", "Yanfei", "2.4"],
+            [ef[15], "Yun Jin", "Ningguang", "Chongyun", "2.4"],
+            [ef[6], "Yun Jin", "Ningguang", "Chongyun", "2.4"],
+            [ef[14], "Gorou", "Barbara", "Xiangling", "2.3"],
+            [ef[8], "Bennett", "Noelle", "Rosaria", "2.3"],
+            [ef[4], "Bennett", "Noelle", "Rosaria", "2.3"],
+            [ef[7], "Thoma", "Diona", "Sayu", "2.2"],
+            [ef[2], "Ningguang", "Chongyun", "Yanfei", "2.2"],
+            [ef[13], "Rosaria", "Beidou", "Xingqiu", "2.1"],
+            [ef[12], "Xiangling", "Kujou Sara", "Sucrose", "2.1"],
+            [ef[11], "Sayu", "Diona", "Xingyan", "2.0"],
+            [ef[10], "Ningguang", "Chongyun", "Yanfei", "2.0"],
+            [ef[9], "Rosaria", "Razor", "Bennett", "1.6"],
+            [ef[1], "Barbara", "Sucrose", "Fischl", "1.6"],
+            [ef[8], "Xingyan", "Xingqiu", "Beidou", "1.5"],
+            [ef[3], "Yanfei", "Noelle", "Diona", "1.5"],
+            [ef[2], "Rosaria", "Barbara", "Fischl", "1.4"],
+            [ef[0], "Sucrose", "Razor", "Noelle", "1.4"],
+            [ef[7], "Xingqiu", "Xiangling", "Chongyun", "1.3"],
             ["Keqing", "Ningguang", "Bennett", "Barbara", "1.3"],
-            ["Xiao", "Diona", "Beidou", "Xingyan", "1.3"],
-            ["Ganyu", "Xiangling", "Xingqiu", "Noelle", "1.2"],
-            ["Albedo", "Fischl", "Sucrose", "Bennett", "1.2"],
-            ["Zhongli", "Xingyan", "Razor", "Chongyun", "1.1"],
-            ["Tartaglia", "Diona", "Beidou", "Ningguang", "1.1"],
-            ["Klee", "Xingqiu", "Noelle", "Sucrose", "1.0"],
-            ["Venti", "Fischl", "Barbara", "Xiangling", "1.0"]
+            [ef[6], "Diona", "Beidou", "Xingyan", "1.3"],
+            [ef[5], "Xiangling", "Xingqiu", "Noelle", "1.2"],
+            [ef[4], "Fischl", "Sucrose", "Bennett", "1.2"],
+            [ef[3], "Xingyan", "Razor", "Chongyun", "1.1"],
+            [ef[2], "Diona", "Beidou", "Ningguang", "1.1"],
+            [ef[1], "Xingqiu", "Noelle", "Sucrose", "1.0"],
+            [ef[0], "Fischl", "Barbara", "Xiangling", "1.0"]
         ]
         let aa = ["Amber", "Barbara", "Beidou", "Bennett", "Chongyun", "Diona", "Fischel", "Gorou", "Kaeya", "Kujou Sara", "Lisa", "Ningguang", "Noelle", "Razor", "Rosaria", "Sayu", "Succrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yun Jin", "Rust", "The Stringless", "Eye of Perception", "The Widsith", "Favonius Lance", "Painslasher", "The Bell", "Lion's Roar", "The Flute", "Sacrificial Bow", "Favonius Warbow", "Sacrificial Fragments", "Favonius Codex", "Dragon's Bane", "Sacrificial Greatsword", "Favonius Greatsword", "Sacrificial Sword", "Favonius Sword"];
         let a4 = ["Amber", "Barbara", "Beidou", "Bennett", "Chongyun", "Diona", "Fischel", "Gorou", "Kaeya", "Kujou Sara", "Lisa", "Ningguang", "Noelle", "Razor", "Rosaria", "Sayu", "Succrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yun Jin", "Rust", "The Stringless", "Eye of Perception", "The Widsith", "Favonius Lance", "Painslasher", "The Bell", "Lion's Roar", "The Flute", "Sacrificial Bow", "Favonius Warbow", "Sacrificial Fragments", "Favonius Codex", "Dragon's Bane", "Sacrificial Greatsword", "Favonius Greatsword", "Sacrificial Sword", "Favonius Sword"];
         let a3 = ["Slingshot", "Raven Bow", "Thrilling Tales of Dragon Slayers", "Black Tassel", "Bloodtainted Greatsword", "Skyrider Sword", "Cool Steel", "Sharpshooter's Oath", "Emerald Orb", "Magic Guide", "Debate Club", "Ferrous Shadow", "Harbinger of Dawn"]
         let a5 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
         let a7 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
-        let a8 = ["Mona", "QiQI", "Jean", "Diluc", "Keqing"];
         let rols90 = 0;
         let rols = 0;
         function loadlist() {
             console.log("lol");
             for (let i = 0; i < ca.length; i++) {
                 let b = ca[i]
-                console.log(b);
                 document.getElementById("calulos").innerHTML = document.getElementById("calulos").innerHTML + "<p onclick=gelt(" + i + ")>" + b[0] + "   " + b[4] + "</p>"
 
             }
@@ -154,18 +161,14 @@
         seteventfivestar(ca[0][0])
         function gelt(lol) {
             let b = ca[lol]
-            console.log("old a5", a5);
             a5.length = 0
-            a5 = a5.concat(a8)
-            console.log("a7", a7);
-            console.log("a5", a5);
-            console.log("a8", a8);
+            a5 = a5.concat(a7)
             a4.length = 0
             a4 = a4.concat(aa)
             seteventfourestar(b[1]);
             seteventfourestar(b[2]);
             seteventfourestar(b[3]);
-            seteventfivestar(b[0])
+            seteventfivestar(b[0]);
         }
         function getRandomInt(max) {
             return Math.floor(Math.random() * max);
@@ -174,26 +177,20 @@
             return list[Math.floor((Math.random() * list.length))];
         }
         function get3star() {
-            //console.log("3 Sterne");
             document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p>3 Sterne :" + get_random(a3) + "</p>"
         }
         function get4star() {
-            //console.log("4 Sterne");
             document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='vier'>4 Sterne :" + get_random(a4) + "</p>"
         }
         function get5star() {
-            //console.log("5 Sterne");
             let s = get_random(a5)
             if (i == 1) {
-                //Event
                 i = 0;
                 document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  :" + eventfivestar + "</p>"
             } else if (a7.includes(s)) {
-                //STandart
                 i = i + 1
                 document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  : " + s + "</p>"
             } else if (s == eventfivestar) {
-                //Event
                 document.getElementById("kek").innerHTML = document.getElementById("kek").innerHTML + "<p id='fuenf'>5 Sterne  : " + s + "</p>"
                 i = 0
             }
@@ -245,23 +242,19 @@
         }
         function lol() {
             loadlist()
-            //document.body.style = "color:red"
 
 
 
         }
         function seteventfivestar(name) {
             eventfivestar = name;
-            for (let i = 0; i < a8.length; i++) {
+            for (let i = 0; i < a7.length; i++) {
                 a5.push(name);
-                //console.log(a5);
             }
         } function seteventfourestar(name) {
             let numb = Math.round(aa.length / 3)
-            console.log("lol", numb);
             for (let i = 0; i < numb; i++) {
                 a4.push(name);
-                //console.log(a4);
             }
         }
 
